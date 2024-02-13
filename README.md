@@ -11,9 +11,9 @@ CLID Apparel <br>
 ├── db<br>
 | └── index.js<br>
 ├── models<br>
-| ├── Clothes.js product/type/sizes/price/brand/gender<br>
-| ├── Customer.js name/id/address/email/phone (Form-user activity) <br>
-| └── index.js<br>
+|   ├── Clothes.js  product/type/sizes/price/color/gender<br>
+|   ├── Customer.js name/id/address/email/phone (Form-user activity) <br>
+|   └── index.js<br>
 ├── package.json<br>
 └── server.js<br>
 <br>
