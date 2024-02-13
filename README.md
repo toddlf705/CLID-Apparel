@@ -6,10 +6,10 @@ CLID Apparel <br>
 │   ├── style.css<br>
 │   └── script.js<br>
 ├── controllers<br>
-|   ├── Clothes.js<br>
-|   └── Customer.js<br>
+| ├── Clothes.js<br>
+| └── Customer.js<br>
 ├── db<br>
-|   └── index.js<br>
+| └── index.js<br>
 ├── models<br>
 |   ├── Clothes.js  product/type/sizes/price/color/gender<br>
 |   ├── Customer.js name/id/address/email/phone (Form-user activity) <br>
@@ -23,3 +23,12 @@ Front End- Itzel & Daisy<br>
 Back End - Lane & Clora<br>
 Customer - Lane<br>
 Clothes - Clora <br>
+
+Instillations required <br>
+
+npm install mongoose <br>
+npm install express <br>
+(I don't think you need to do this, try npm run dev first and if not then install) => npm install nodemon --save-dev <br>
+
+npm install morgan <br>
+npm i body-parser<br>
