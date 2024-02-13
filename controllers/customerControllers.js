@@ -18,6 +18,8 @@ const getAllCustomers = async (req, res) => {
 //   } else res.send("No customer with that index found");
 // };
 
+
+//will test if this works accurately, if not will use function above
 const getCustomer= async (req, res) => {
     try {
       const { query } = req.params;
