@@ -9,13 +9,37 @@ const getAllCustomers = async (req, res) => {
   }
 };
 
-const getCustomer = async (req, res) => {
-  const { id } = req.params;
-  const customer = await Customer.find();
-  if (customer[id]) {
-    res.send(customer[id]);
-  } else res.send("No customer with that index found");
-};
+
+// const getCustomer = async (req, res) => {
+//   const { id } = req.params;
+//   const customer = await Customer.find();
+//   if (customer[id]) {
+//     res.send(customer[id]);
+//   } else res.send("No customer with that index found");
+// };
+
+const getCustomer= async (req, res) => {
+    try {
+      const { query } = req.params;
+      if (typeof query == "number") {
+        const customer = await Customer.find();
+        if (customer[id]) {
+          res.send(customer[id]);
+        } else res.send("No customer with that index found");
+      } else {
+        const customers = await Customer.find({});
+        if (!customers) throw Error("customers not found");
+        for (let customer of customers) {
+          if (customer.lastName == query) {
+            res.json(customer);
+          }
+        }
+      }
+    } catch (e) {
+      console.log(e);
+      res.send("Customer not found!");
+    }
+  };
 
 const createCustomer = async (req, res) => {
   const { name, address, email, phone } = req.body;

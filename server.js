@@ -21,7 +21,7 @@ app.get("/", (req, res) => res.send("This is our landing page!"));
 
 app.get("/customers", customerControllers.getAllCustomers)
 
-app.get("/customers/:id", customerControllers.getCustomer)
+app.get("/customers/:query", customerControllers.getCustomer)
 
 app.post("/customers", customerControllers.createCustomer)
 
